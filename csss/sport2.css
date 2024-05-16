@@ -1,0 +1,555 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+:root {
+  --text-color: #000000;
+  --accent: #00A2E8;
+  --gray: #D9D9D9;
+  --font-main: "Inter Tight", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+/* <uniquifier>: Use a unique and descriptive class name
+/* <weight>: Use a value from 100 to 900
+/* font-family: "Inter Tight", sans-serif;
+
+/*.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+/* Шапка */
+.nav {
+    height: 82px;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    align-self: center;
+    color: #000000;
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-left: 55px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700px;
+    font-size: 48px;
+}
+
+.nav-list {
+    align-self: center;
+    justify-self: center;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 47px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400px;
+    font-size: 24px;
+}
+
+.cart {
+    align-self: center;
+    justify-self: end;
+    position: relative;
+    margin-right: 110px;
+}
+
+.cart_num {
+    position: absolute;
+    top: 3px;
+    right: -6px;
+    background-color: #00A2E8;
+    border-radius: 40px;
+    display: inline-block;
+    height: 25px;
+    padding: 0 6px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.header {
+    padding-top: 24px;
+}
+
+
+/* Шапка старая*/
+header a{
+    color: #000000;
+}
+
+.nav-list a:hover {
+    color: #D9D9D9;
+}
+
+
+
+
+
+/* --------ФИЛЬТРАЦИЯ ------*/
+.filtr {
+    display: flex;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.filtr-price {
+    text-decoration: none;
+    border: none;
+    background-color: #fff;
+    margin: 0 35px;
+    font-size: 24px;
+}
+
+.filtr-price:hover {
+    color: #D9D9D9;
+}
+
+.filtr-popular {
+    text-decoration: none;
+    border: none;
+    background-color: #fff;
+    font-size: 24px;
+}
+
+.filtr-popular:hover {
+    color: #D9D9D9;
+}
+
+
+
+
+
+
+
+/* --------КАРТИНКИ ИЗ ХИТОВ ------*/
+.products {
+    margin-top: 45px;
+    margin-bottom: 144px;
+}
+
+.product__title {
+    padding-bottom: 60px;
+    padding-left: 60px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    width: 225px;
+    max-height: 350;
+    text-align: center;
+    margin:  20px auto;
+    box-shadow: 1px 2px 4px;
+    background: #fff;
+    border: 1px solid #D9D9D9;
+}
+
+.card:hover {
+    border: 1px solid #00A2E8;
+}
+
+.card__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    max-height: 225px;
+}
+
+.card__content {
+    padding: 10px 0;
+}
+
+.card__title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 20px 0;
+    left: 5px;
+}
+
+.rating {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.rating__item {
+  font-size: 20px;
+  color: #dcdcdc;
+  transition: .1s;
+  cursor: pointer;
+}
+
+.rating__item:hover,
+.rating__item:hover ~ .rating__item {
+  color: #989898;
+}
+
+.rating[data-total-value="1"] .rating__item:nth-child(n + 5),
+.rating[data-total-value="2"] .rating__item:nth-child(n + 4),
+.rating[data-total-value="3"] .rating__item:nth-child(n + 3),
+.rating[data-total-value="4"] .rating__item:nth-child(n + 2),
+.rating[data-total-value="5"] .rating__item:nth-child(n + 1) {
+  color: gold;
+}
+
+
+.card__price {
+    font-size: 24px;
+    color: #000000;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.card__add {
+    position: relative;
+    z-index: 3;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 31px;
+    max-width: 203px;
+    margin: 0 10px;
+    background: #fff;
+    color: #000000;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #00A2E8;
+    transition: all 0.3s;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400px;
+  font-size: 20px;
+}
+
+.card__add:hover {
+    background: #00A2E8;
+    color: #fff;
+}
+
+.product__show {
+    display: flex;
+    column-gap: 60px;
+    margin: 0 125px;
+    margin-bottom: 82px;
+}
+
+
+
+
+
+
+/* Сетка каталог */
+.container-main {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container__cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 225px);
+    justify-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    column-gap: 72px;
+    row-gap: 94px;
+}
+
+
+
+
+
+/* ------ФУТЕР------ */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.33);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: scroll;
+}
+.popup__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  min-height: 300px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+.popup__item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+.popup__item:last-of-type {
+  border-bottom: none;
+}
+.popup__title {
+  font-size: 20px;
+}
+.popup__product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.popup__product-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup__product-image {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 10px;
+}
+.popup__product-title {
+  max-width: 300px;
+  font-weight: 500;
+}
+.popup__product-price {
+  font-size: 18px;
+  margin-right: 15px;
+}
+.popup__product-delete {
+  font-size: 12px;
+  padding: 5px;
+  cursor: pointer;
+  color: #d62240;
+}
+.popup__cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 5px;
+}
+.popup__cost-title {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #364364;
+  text-align: right;
+}
+.popup__cost-value {
+  font-size: 20px;
+}
+.popup__close {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  color: rgba(54, 67, 100, 0.7);
+  font-size: 20px;
+}
+.popup__close:hover {
+  color: rgb(54, 67, 100);
+}
+.popup--open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+
+
+
+/* ------ФУТЕР------ */
+.footer-bg {
+    background-color: #00A2E8;
+    display: flex;
+    height: 170px;
+    padding: 36px 44px;
+  }
+  
+  .footer-logo {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700px;
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 4px 4px black;
+  }
+  
+  .footer-text {
+    color: #fff;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400px;
+    font-size: 20px;
+    margin-left: 92px;
+  }
+  
+  .phone {
+    padding-bottom: 39px;
+  }
+  
+  .client-card {
+    color: #fff;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400px;
+    font-size: 20px;
+    margin-left: 92px;
+  }
+  
+  .feed-back {
+    color: #fff;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400px;
+    font-size: 20px;
+    margin-left: 92px;
+  }
