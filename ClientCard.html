@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта клиента</title>
+
+    <!-- Bootstrap reboot (для сброса стилей) -->
+    <link rel="stylesheet" href="libs/bootstrap-reboot.min.css">
+
+    <!-- Bootstrap сетка -->
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+
+    <!-- Шрифты с Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Стили сайта -->
+    <link rel="stylesheet" href="csss/ClientCard.css">
+
+
+</head>
+<body>
+
+    <h2>Заполните анкету</h2>
+
+    <form id="surveyForm" class="main-form">
+        <label for="lastname">Фамилия:</label>
+        <input type="text" id="lastname" name="lastname" onchange="convertToUppercase(this)" required>
+        <br><br>
+        <label for="firstname">Имя:</label>
+        <input type="text" id="firstname" name="firstname" onchange="convertToUppercase(this)" required>
+        <br><br>
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age">
+        <br><br>
+        <button type="button" onclick="submitForm()">Отправить</button>
+        <button type="button" onclick="resetForm()">Ввести данные заново</button>
+
+    </form>
+
+    <form action="/index.html">
+        <button>Назад</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            var age = parseInt(document.getElementById("age").value);
+            if (age < 18) {
+                alert("Карта выдается только после 18 лет");
+            } else {
+                var lastname = document.getElementById("lastname").value;
+                var firstname = document.getElementById("firstname").value;
+                var cardNumber = Math.floor(Math.random() * 10000000000000000); // Генерация случайного номера карты
+                alert("Номер карты: " + cardNumber + "\nФамилия: " + lastname + "\nИмя: " + firstname);
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("surveyForm").reset(); // Сброс формы
+        }
+    </script>
+
+    <script>
+    function convertToUppercase(input) {
+        input.value = input.value.toUpperCase();
+    }
+    </script>
+
+</body>
+</html>

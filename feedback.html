@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Отзывы</title>
+
+    <!-- Bootstrap reboot (для сброса стилей) -->
+    <link rel="stylesheet" href="libs/bootstrap-reboot.min.css">
+
+    <!-- Bootstrap сетка -->
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+
+    <!-- Шрифты с Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Стили сайта -->
+    <link rel="stylesheet" href="/csss/fb.css" />
+
+    <script type="text/javascript">
+        function ValidMail() {
+            let re = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i;
+            let myMail = document.getElementById('email').value;
+            let valid = re.test(myMail);
+            if (valid) output = '';
+            else output = 'Проверьте правильность ввода данных';
+            document.getElementById('message').innerHTML = output;
+            return valid;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Оставьте отзыв</h2>
+    <p id="message">Пожалуйста, заполните все поля формы</p>
+
+    <div class="name">Имя</div>
+    <input id="name" class="name-box" type="text" /><br />
+
+    <div class="email">Email*</div>
+    <input id="email" name="email-box" type="text" required/><br />
+
+    <div class="feedb">Текст отзыва*</div>
+    <input id="feedb" class="feedb-box" type="text" required/><br />
+
+    <div class="done" id="done"></div>
+    <button class="butt-done" id="check" onclick="myFunction(); ValidMail();">Отправить</button>
+
+    <form action="/index.html" class="goback">
+        <button>Назад</button>
+    </form>
+
+    <script>
+        function myFunction() {
+            document.getElementById("done").innerHTML = "Успешно!";
+        }
+    </script>
+</body>
+</html>
